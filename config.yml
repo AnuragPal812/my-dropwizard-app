@@ -1,0 +1,1 @@
+databaseUrl: "jdbc:h2:mem:example;DB_CLOSE_DELAY=-1"
