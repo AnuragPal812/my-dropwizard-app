@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.health.AppHealthCheck;
 import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
@@ -36,5 +37,10 @@ public class MyApplication extends Application<MyConfiguration> {
 
         final UserResource userResource = new UserResource(userDAO);
         env.jersey().register(userResource);
+
+        //register healthcheck
+        final AppHealthCheck healthCheck = new AppHealthCheck();
+        env.healthChecks().register("app", healthCheck);
+
     }
 }
