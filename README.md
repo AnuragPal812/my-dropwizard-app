@@ -11,7 +11,7 @@ A minimal example Dropwizard project to demonstrate:
   
 # Requirements
 
-- Java 11+ (or your project’s version)
+- Java 11+
 - Maven
 
 # How to Run
