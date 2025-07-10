@@ -3,7 +3,7 @@ package com.example;
 import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
-import com.example.resources.UserResource;
+import com.example.resource.UserResource;
 import com.example.db.UserDAO;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
