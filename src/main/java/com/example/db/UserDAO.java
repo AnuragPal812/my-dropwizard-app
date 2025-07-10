@@ -23,4 +23,10 @@ public interface UserDAO {
     @SqlQuery("SELECT * FROM users")
     @RegisterBeanMapper(User.class)
     List<User> findAll();
+
+    @SqlUpdate("DELETE FROM users WHERE id = :id")
+    int deleteById(@Bind("id") long id);
+
+    @SqlUpdate("UPDATE users SET name = :name, email = :email WHERE id = :id")
+    int updateById(@Bind("id") int id, @BindBean User user);
 }
